@@ -1,6 +1,3 @@
-Alright — here’s **everything you’ve seen so far** in one complete `README.md` file, exactly as it should appear in your repo:
-
-````markdown
 # Static `socat` Build for Linux (amd64)
 
 This repository provides a Docker-based workflow for compiling a **static** `socat` binary for **Linux/amd64**.  
@@ -108,5 +105,4 @@ If you save this as `README.md`, it will fully document:
 - Repository file structure
 - License info
 
-Do you want me to also **embed the `build-socat.sh` content** in the README so people can see the full build logic without opening the file? That would make the public repo fully self-contained for readers.
 ```
