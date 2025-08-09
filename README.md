@@ -61,13 +61,13 @@ docker run --rm --platform linux/amd64 -v ./:/out socat-builder sh -c "/build-so
 ```bash
 DOCKER_BUILDKIT=1 docker build \
     --platform linux/amd64 \
-    --output type=local,dest=./out .
+    --output type=local,dest=./ .
 ```
 
 After completion, the compiled binary will be available at:
 
 ```
-./out/socat
+./socat
 ```
 
 ### Running the Build Inside a Container (no cleanup)
@@ -75,7 +75,7 @@ After completion, the compiled binary will be available at:
 ```bash
 docker build --platform linux/amd64 -t socat-builder .
 docker run --rm --platform linux/amd64 \
-    -v $(pwd)/out:/out \
+    -v ./:/out \
     socat-builder \
     sh -c "/build-socat.sh && cp /tmp/socat-1.7.3.2/socat /out/"
 ```
